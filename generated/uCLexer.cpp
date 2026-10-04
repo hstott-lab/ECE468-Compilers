@@ -1,0 +1,223 @@
+
+ 
+
+
+// Generated from uC.g4 by ANTLR 4.13.1
+
+
+#include "uCLexer.h"
+
+
+using namespace antlr4;
+
+
+
+using namespace antlr4;
+
+namespace {
+
+struct UCLexerStaticData final {
+  UCLexerStaticData(std::vector<std::string> ruleNames,
+                          std::vector<std::string> channelNames,
+                          std::vector<std::string> modeNames,
+                          std::vector<std::string> literalNames,
+                          std::vector<std::string> symbolicNames)
+      : ruleNames(std::move(ruleNames)), channelNames(std::move(channelNames)),
+        modeNames(std::move(modeNames)), literalNames(std::move(literalNames)),
+        symbolicNames(std::move(symbolicNames)),
+        vocabulary(this->literalNames, this->symbolicNames) {}
+
+  UCLexerStaticData(const UCLexerStaticData&) = delete;
+  UCLexerStaticData(UCLexerStaticData&&) = delete;
+  UCLexerStaticData& operator=(const UCLexerStaticData&) = delete;
+  UCLexerStaticData& operator=(UCLexerStaticData&&) = delete;
+
+  std::vector<antlr4::dfa::DFA> decisionToDFA;
+  antlr4::atn::PredictionContextCache sharedContextCache;
+  const std::vector<std::string> ruleNames;
+  const std::vector<std::string> channelNames;
+  const std::vector<std::string> modeNames;
+  const std::vector<std::string> literalNames;
+  const std::vector<std::string> symbolicNames;
+  const antlr4::dfa::Vocabulary vocabulary;
+  antlr4::atn::SerializedATNView serializedATN;
+  std::unique_ptr<antlr4::atn::ATN> atn;
+};
+
+::antlr4::internal::OnceFlag uclexerLexerOnceFlag;
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+static thread_local
+#endif
+UCLexerStaticData *uclexerLexerStaticData = nullptr;
+
+void uclexerLexerInitialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  if (uclexerLexerStaticData != nullptr) {
+    return;
+  }
+#else
+  assert(uclexerLexerStaticData == nullptr);
+#endif
+  auto staticData = std::make_unique<UCLexerStaticData>(
+    std::vector<std::string>{
+      "T__0", "T__1", "T__2", "T__3", "T__4", "T__5", "T__6", "T__7", "T__8", 
+      "T__9", "T__10", "T__11", "T__12", "T__13", "T__14", "T__15", "T__16", 
+      "T__17", "T__18", "T__19", "T__20", "T__21", "T__22", "T__23", "T__24", 
+      "T__25", "IDENTIFIER", "INT_LITERAL", "FLOAT_LITERAL", "STR_LITERAL", 
+      "COMMENT", "WS", "LETTER", "ZERO", "DIGIT"
+    },
+    std::vector<std::string>{
+      "DEFAULT_TOKEN_CHANNEL", "HIDDEN"
+    },
+    std::vector<std::string>{
+      "DEFAULT_MODE"
+    },
+    std::vector<std::string>{
+      "", "';'", "'string'", "'='", "'int'", "'float'", "'main'", "'('", 
+      "')'", "'{'", "'}'", "'read'", "'print'", "'return'", "'if'", "'else'", 
+      "'while'", "'-'", "'<'", "'<='", "'>='", "'=='", "'!='", "'>'", "'*'", 
+      "'/'", "'+'"
+    },
+    std::vector<std::string>{
+      "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", "", 
+      "", "", "", "", "", "", "", "", "", "", "IDENTIFIER", "INT_LITERAL", 
+      "FLOAT_LITERAL", "STR_LITERAL", "COMMENT", "WS"
+    }
+  );
+  static const int32_t serializedATNSegment[] = {
+  	4,0,32,225,6,-1,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+  	6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,
+  	7,14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,
+  	7,21,2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,7,27,2,28,
+  	7,28,2,29,7,29,2,30,7,30,2,31,7,31,2,32,7,32,2,33,7,33,2,34,7,34,1,0,
+  	1,0,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,2,1,2,1,3,1,3,1,3,1,3,1,4,1,4,1,4,1,
+  	4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,6,1,6,1,7,1,7,1,8,1,8,1,9,1,9,1,10,1,
+  	10,1,10,1,10,1,10,1,11,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,
+  	12,1,12,1,12,1,13,1,13,1,13,1,14,1,14,1,14,1,14,1,14,1,15,1,15,1,15,1,
+  	15,1,15,1,15,1,16,1,16,1,17,1,17,1,18,1,18,1,18,1,19,1,19,1,19,1,20,1,
+  	20,1,20,1,21,1,21,1,21,1,22,1,22,1,23,1,23,1,24,1,24,1,25,1,25,1,26,1,
+  	26,1,26,1,26,5,26,166,8,26,10,26,12,26,169,9,26,1,27,1,27,1,27,1,27,5,
+  	27,175,8,27,10,27,12,27,178,9,27,3,27,180,8,27,1,28,1,28,1,28,1,28,4,
+  	28,186,8,28,11,28,12,28,187,1,29,1,29,5,29,192,8,29,10,29,12,29,195,9,
+  	29,1,29,1,29,1,30,1,30,1,30,1,30,5,30,203,8,30,10,30,12,30,206,9,30,1,
+  	30,1,30,1,30,1,30,1,30,1,31,4,31,214,8,31,11,31,12,31,215,1,31,1,31,1,
+  	32,1,32,1,33,1,33,1,34,1,34,1,204,0,35,1,1,3,2,5,3,7,4,9,5,11,6,13,7,
+  	15,8,17,9,19,10,21,11,23,12,25,13,27,14,29,15,31,16,33,17,35,18,37,19,
+  	39,20,41,21,43,22,45,23,47,24,49,25,51,26,53,27,55,28,57,29,59,30,61,
+  	31,63,32,65,0,67,0,69,0,1,0,3,1,0,34,34,3,0,9,10,13,13,32,32,2,0,65,90,
+  	97,122,232,0,1,1,0,0,0,0,3,1,0,0,0,0,5,1,0,0,0,0,7,1,0,0,0,0,9,1,0,0,
+  	0,0,11,1,0,0,0,0,13,1,0,0,0,0,15,1,0,0,0,0,17,1,0,0,0,0,19,1,0,0,0,0,
+  	21,1,0,0,0,0,23,1,0,0,0,0,25,1,0,0,0,0,27,1,0,0,0,0,29,1,0,0,0,0,31,1,
+  	0,0,0,0,33,1,0,0,0,0,35,1,0,0,0,0,37,1,0,0,0,0,39,1,0,0,0,0,41,1,0,0,
+  	0,0,43,1,0,0,0,0,45,1,0,0,0,0,47,1,0,0,0,0,49,1,0,0,0,0,51,1,0,0,0,0,
+  	53,1,0,0,0,0,55,1,0,0,0,0,57,1,0,0,0,0,59,1,0,0,0,0,61,1,0,0,0,0,63,1,
+  	0,0,0,1,71,1,0,0,0,3,73,1,0,0,0,5,80,1,0,0,0,7,82,1,0,0,0,9,86,1,0,0,
+  	0,11,92,1,0,0,0,13,97,1,0,0,0,15,99,1,0,0,0,17,101,1,0,0,0,19,103,1,0,
+  	0,0,21,105,1,0,0,0,23,110,1,0,0,0,25,116,1,0,0,0,27,123,1,0,0,0,29,126,
+  	1,0,0,0,31,131,1,0,0,0,33,137,1,0,0,0,35,139,1,0,0,0,37,141,1,0,0,0,39,
+  	144,1,0,0,0,41,147,1,0,0,0,43,150,1,0,0,0,45,153,1,0,0,0,47,155,1,0,0,
+  	0,49,157,1,0,0,0,51,159,1,0,0,0,53,161,1,0,0,0,55,179,1,0,0,0,57,181,
+  	1,0,0,0,59,189,1,0,0,0,61,198,1,0,0,0,63,213,1,0,0,0,65,219,1,0,0,0,67,
+  	221,1,0,0,0,69,223,1,0,0,0,71,72,5,59,0,0,72,2,1,0,0,0,73,74,5,115,0,
+  	0,74,75,5,116,0,0,75,76,5,114,0,0,76,77,5,105,0,0,77,78,5,110,0,0,78,
+  	79,5,103,0,0,79,4,1,0,0,0,80,81,5,61,0,0,81,6,1,0,0,0,82,83,5,105,0,0,
+  	83,84,5,110,0,0,84,85,5,116,0,0,85,8,1,0,0,0,86,87,5,102,0,0,87,88,5,
+  	108,0,0,88,89,5,111,0,0,89,90,5,97,0,0,90,91,5,116,0,0,91,10,1,0,0,0,
+  	92,93,5,109,0,0,93,94,5,97,0,0,94,95,5,105,0,0,95,96,5,110,0,0,96,12,
+  	1,0,0,0,97,98,5,40,0,0,98,14,1,0,0,0,99,100,5,41,0,0,100,16,1,0,0,0,101,
+  	102,5,123,0,0,102,18,1,0,0,0,103,104,5,125,0,0,104,20,1,0,0,0,105,106,
+  	5,114,0,0,106,107,5,101,0,0,107,108,5,97,0,0,108,109,5,100,0,0,109,22,
+  	1,0,0,0,110,111,5,112,0,0,111,112,5,114,0,0,112,113,5,105,0,0,113,114,
+  	5,110,0,0,114,115,5,116,0,0,115,24,1,0,0,0,116,117,5,114,0,0,117,118,
+  	5,101,0,0,118,119,5,116,0,0,119,120,5,117,0,0,120,121,5,114,0,0,121,122,
+  	5,110,0,0,122,26,1,0,0,0,123,124,5,105,0,0,124,125,5,102,0,0,125,28,1,
+  	0,0,0,126,127,5,101,0,0,127,128,5,108,0,0,128,129,5,115,0,0,129,130,5,
+  	101,0,0,130,30,1,0,0,0,131,132,5,119,0,0,132,133,5,104,0,0,133,134,5,
+  	105,0,0,134,135,5,108,0,0,135,136,5,101,0,0,136,32,1,0,0,0,137,138,5,
+  	45,0,0,138,34,1,0,0,0,139,140,5,60,0,0,140,36,1,0,0,0,141,142,5,60,0,
+  	0,142,143,5,61,0,0,143,38,1,0,0,0,144,145,5,62,0,0,145,146,5,61,0,0,146,
+  	40,1,0,0,0,147,148,5,61,0,0,148,149,5,61,0,0,149,42,1,0,0,0,150,151,5,
+  	33,0,0,151,152,5,61,0,0,152,44,1,0,0,0,153,154,5,62,0,0,154,46,1,0,0,
+  	0,155,156,5,42,0,0,156,48,1,0,0,0,157,158,5,47,0,0,158,50,1,0,0,0,159,
+  	160,5,43,0,0,160,52,1,0,0,0,161,167,3,65,32,0,162,166,3,65,32,0,163,166,
+  	3,67,33,0,164,166,3,69,34,0,165,162,1,0,0,0,165,163,1,0,0,0,165,164,1,
+  	0,0,0,166,169,1,0,0,0,167,165,1,0,0,0,167,168,1,0,0,0,168,54,1,0,0,0,
+  	169,167,1,0,0,0,170,180,3,67,33,0,171,176,3,69,34,0,172,175,3,67,33,0,
+  	173,175,3,69,34,0,174,172,1,0,0,0,174,173,1,0,0,0,175,178,1,0,0,0,176,
+  	174,1,0,0,0,176,177,1,0,0,0,177,180,1,0,0,0,178,176,1,0,0,0,179,170,1,
+  	0,0,0,179,171,1,0,0,0,180,56,1,0,0,0,181,182,3,55,27,0,182,185,5,46,0,
+  	0,183,186,3,67,33,0,184,186,3,69,34,0,185,183,1,0,0,0,185,184,1,0,0,0,
+  	186,187,1,0,0,0,187,185,1,0,0,0,187,188,1,0,0,0,188,58,1,0,0,0,189,193,
+  	5,34,0,0,190,192,8,0,0,0,191,190,1,0,0,0,192,195,1,0,0,0,193,191,1,0,
+  	0,0,193,194,1,0,0,0,194,196,1,0,0,0,195,193,1,0,0,0,196,197,5,34,0,0,
+  	197,60,1,0,0,0,198,199,5,47,0,0,199,200,5,42,0,0,200,204,1,0,0,0,201,
+  	203,9,0,0,0,202,201,1,0,0,0,203,206,1,0,0,0,204,205,1,0,0,0,204,202,1,
+  	0,0,0,205,207,1,0,0,0,206,204,1,0,0,0,207,208,5,42,0,0,208,209,5,47,0,
+  	0,209,210,1,0,0,0,210,211,6,30,0,0,211,62,1,0,0,0,212,214,7,1,0,0,213,
+  	212,1,0,0,0,214,215,1,0,0,0,215,213,1,0,0,0,215,216,1,0,0,0,216,217,1,
+  	0,0,0,217,218,6,31,0,0,218,64,1,0,0,0,219,220,7,2,0,0,220,66,1,0,0,0,
+  	221,222,5,48,0,0,222,68,1,0,0,0,223,224,2,49,57,0,224,70,1,0,0,0,11,0,
+  	165,167,174,176,179,185,187,193,204,215,1,6,0,0
+  };
+  staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
+
+  antlr4::atn::ATNDeserializer deserializer;
+  staticData->atn = deserializer.deserialize(staticData->serializedATN);
+
+  const size_t count = staticData->atn->getNumberOfDecisions();
+  staticData->decisionToDFA.reserve(count);
+  for (size_t i = 0; i < count; i++) { 
+    staticData->decisionToDFA.emplace_back(staticData->atn->getDecisionState(i), i);
+  }
+  uclexerLexerStaticData = staticData.release();
+}
+
+}
+
+uCLexer::uCLexer(CharStream *input) : Lexer(input) {
+  uCLexer::initialize();
+  _interpreter = new atn::LexerATNSimulator(this, *uclexerLexerStaticData->atn, uclexerLexerStaticData->decisionToDFA, uclexerLexerStaticData->sharedContextCache);
+}
+
+uCLexer::~uCLexer() {
+  delete _interpreter;
+}
+
+std::string uCLexer::getGrammarFileName() const {
+  return "uC.g4";
+}
+
+const std::vector<std::string>& uCLexer::getRuleNames() const {
+  return uclexerLexerStaticData->ruleNames;
+}
+
+const std::vector<std::string>& uCLexer::getChannelNames() const {
+  return uclexerLexerStaticData->channelNames;
+}
+
+const std::vector<std::string>& uCLexer::getModeNames() const {
+  return uclexerLexerStaticData->modeNames;
+}
+
+const dfa::Vocabulary& uCLexer::getVocabulary() const {
+  return uclexerLexerStaticData->vocabulary;
+}
+
+antlr4::atn::SerializedATNView uCLexer::getSerializedATN() const {
+  return uclexerLexerStaticData->serializedATN;
+}
+
+const atn::ATN& uCLexer::getATN() const {
+  return *uclexerLexerStaticData->atn;
+}
+
+
+
+
+void uCLexer::initialize() {
+#if ANTLR4_USE_THREAD_LOCAL_CACHE
+  uclexerLexerInitialize();
+#else
+  ::antlr4::internal::call_once(uclexerLexerOnceFlag, uclexerLexerInitialize);
+#endif
+}
