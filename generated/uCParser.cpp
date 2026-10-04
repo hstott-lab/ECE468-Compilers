@@ -5,7 +5,6 @@
 // Generated from uC.g4 by ANTLR 4.13.1
 
 
-#include "uCVisitor.h"
 
 #include "uCParser.h"
 
@@ -200,13 +199,6 @@ size_t uCParser::ProgramContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::ProgramContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitProgram(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::ProgramContext* uCParser::program() {
   ProgramContext *_localctx = _tracker.createInstance<ProgramContext>(_ctx, getState());
   enterRule(_localctx, 0, uCParser::RuleProgram);
@@ -258,13 +250,6 @@ size_t uCParser::DeclsContext::getRuleIndex() const {
   return uCParser::RuleDecls;
 }
 
-
-std::any uCParser::DeclsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitDecls(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::DeclsContext* uCParser::decls() {
   DeclsContext *_localctx = _tracker.createInstance<DeclsContext>(_ctx, getState());
@@ -339,13 +324,6 @@ size_t uCParser::Var_declsContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::Var_declsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitVar_decls(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::Var_declsContext* uCParser::var_decls() {
   Var_declsContext *_localctx = _tracker.createInstance<Var_declsContext>(_ctx, getState());
   enterRule(_localctx, 4, uCParser::RuleVar_decls);
@@ -406,13 +384,6 @@ size_t uCParser::IdentContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::IdentContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitIdent(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::IdentContext* uCParser::ident() {
   IdentContext *_localctx = _tracker.createInstance<IdentContext>(_ctx, getState());
   enterRule(_localctx, 6, uCParser::RuleIdent);
@@ -458,13 +429,6 @@ size_t uCParser::Var_declContext::getRuleIndex() const {
   return uCParser::RuleVar_decl;
 }
 
-
-std::any uCParser::Var_declContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitVar_decl(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::Var_declContext* uCParser::var_decl() {
   Var_declContext *_localctx = _tracker.createInstance<Var_declContext>(_ctx, getState());
@@ -516,13 +480,6 @@ size_t uCParser::Str_declContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::Str_declContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitStr_decl(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::Str_declContext* uCParser::str_decl() {
   Str_declContext *_localctx = _tracker.createInstance<Str_declContext>(_ctx, getState());
   enterRule(_localctx, 10, uCParser::RuleStr_decl);
@@ -568,13 +525,6 @@ size_t uCParser::Base_typeContext::getRuleIndex() const {
   return uCParser::RuleBase_type;
 }
 
-
-std::any uCParser::Base_typeContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitBase_type(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::Base_typeContext* uCParser::base_type() {
   Base_typeContext *_localctx = _tracker.createInstance<Base_typeContext>(_ctx, getState());
@@ -627,13 +577,6 @@ size_t uCParser::FunctionContext::getRuleIndex() const {
   return uCParser::RuleFunction;
 }
 
-
-std::any uCParser::FunctionContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitFunction(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::FunctionContext* uCParser::function() {
   FunctionContext *_localctx = _tracker.createInstance<FunctionContext>(_ctx, getState());
@@ -692,13 +635,6 @@ size_t uCParser::StatementsContext::getRuleIndex() const {
   return uCParser::RuleStatements;
 }
 
-
-std::any uCParser::StatementsContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitStatements(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::StatementsContext* uCParser::statements() {
   StatementsContext *_localctx = _tracker.createInstance<StatementsContext>(_ctx, getState());
@@ -772,13 +708,6 @@ size_t uCParser::StatementContext::getRuleIndex() const {
   return uCParser::RuleStatement;
 }
 
-
-std::any uCParser::StatementContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitStatement(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::StatementContext* uCParser::statement() {
   StatementContext *_localctx = _tracker.createInstance<StatementContext>(_ctx, getState());
@@ -863,13 +792,6 @@ size_t uCParser::Base_stmtContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::Base_stmtContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitBase_stmt(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::Base_stmtContext* uCParser::base_stmt() {
   Base_stmtContext *_localctx = _tracker.createInstance<Base_stmtContext>(_ctx, getState());
   enterRule(_localctx, 20, uCParser::RuleBase_stmt);
@@ -943,13 +865,6 @@ size_t uCParser::Read_stmtContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::Read_stmtContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitRead_stmt(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::Read_stmtContext* uCParser::read_stmt() {
   Read_stmtContext *_localctx = _tracker.createInstance<Read_stmtContext>(_ctx, getState());
   enterRule(_localctx, 22, uCParser::RuleRead_stmt);
@@ -997,13 +912,6 @@ size_t uCParser::Print_stmtContext::getRuleIndex() const {
   return uCParser::RulePrint_stmt;
 }
 
-
-std::any uCParser::Print_stmtContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitPrint_stmt(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::Print_stmtContext* uCParser::print_stmt() {
   Print_stmtContext *_localctx = _tracker.createInstance<Print_stmtContext>(_ctx, getState());
@@ -1053,13 +961,6 @@ size_t uCParser::Return_stmtContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::Return_stmtContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitReturn_stmt(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::Return_stmtContext* uCParser::return_stmt() {
   Return_stmtContext *_localctx = _tracker.createInstance<Return_stmtContext>(_ctx, getState());
   enterRule(_localctx, 26, uCParser::RuleReturn_stmt);
@@ -1107,13 +1008,6 @@ size_t uCParser::Assign_stmtContext::getRuleIndex() const {
   return uCParser::RuleAssign_stmt;
 }
 
-
-std::any uCParser::Assign_stmtContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitAssign_stmt(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::Assign_stmtContext* uCParser::assign_stmt() {
   Assign_stmtContext *_localctx = _tracker.createInstance<Assign_stmtContext>(_ctx, getState());
@@ -1168,13 +1062,6 @@ size_t uCParser::If_stmtContext::getRuleIndex() const {
   return uCParser::RuleIf_stmt;
 }
 
-
-std::any uCParser::If_stmtContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitIf_stmt(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::If_stmtContext* uCParser::if_stmt() {
   If_stmtContext *_localctx = _tracker.createInstance<If_stmtContext>(_ctx, getState());
@@ -1249,13 +1136,6 @@ size_t uCParser::While_stmtContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::While_stmtContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitWhile_stmt(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::While_stmtContext* uCParser::while_stmt() {
   While_stmtContext *_localctx = _tracker.createInstance<While_stmtContext>(_ctx, getState());
   enterRule(_localctx, 32, uCParser::RuleWhile_stmt);
@@ -1325,13 +1205,6 @@ size_t uCParser::PrimaryContext::getRuleIndex() const {
   return uCParser::RulePrimary;
 }
 
-
-std::any uCParser::PrimaryContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitPrimary(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::PrimaryContext* uCParser::primary() {
   PrimaryContext *_localctx = _tracker.createInstance<PrimaryContext>(_ctx, getState());
@@ -1417,13 +1290,6 @@ size_t uCParser::Unaryminus_exprContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::Unaryminus_exprContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitUnaryminus_expr(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::Unaryminus_exprContext* uCParser::unaryminus_expr() {
   Unaryminus_exprContext *_localctx = _tracker.createInstance<Unaryminus_exprContext>(_ctx, getState());
   enterRule(_localctx, 36, uCParser::RuleUnaryminus_expr);
@@ -1475,13 +1341,6 @@ size_t uCParser::ExprContext::getRuleIndex() const {
   return uCParser::RuleExpr;
 }
 
-
-std::any uCParser::ExprContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitExpr(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 
 uCParser::ExprContext* uCParser::expr() {
@@ -1566,13 +1425,6 @@ size_t uCParser::TermContext::getRuleIndex() const {
   return uCParser::RuleTerm;
 }
 
-
-std::any uCParser::TermContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitTerm(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 
 uCParser::TermContext* uCParser::term() {
@@ -1660,13 +1512,6 @@ size_t uCParser::CondContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::CondContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitCond(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::CondContext* uCParser::cond() {
   CondContext *_localctx = _tracker.createInstance<CondContext>(_ctx, getState());
   enterRule(_localctx, 42, uCParser::RuleCond);
@@ -1708,13 +1553,6 @@ size_t uCParser::CmpopContext::getRuleIndex() const {
   return uCParser::RuleCmpop;
 }
 
-
-std::any uCParser::CmpopContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitCmpop(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::CmpopContext* uCParser::cmpop() {
   CmpopContext *_localctx = _tracker.createInstance<CmpopContext>(_ctx, getState());
@@ -1763,13 +1601,6 @@ size_t uCParser::MulopContext::getRuleIndex() const {
 }
 
 
-std::any uCParser::MulopContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitMulop(this);
-  else
-    return visitor->visitChildren(this);
-}
-
 uCParser::MulopContext* uCParser::mulop() {
   MulopContext *_localctx = _tracker.createInstance<MulopContext>(_ctx, getState());
   enterRule(_localctx, 46, uCParser::RuleMulop);
@@ -1817,13 +1648,6 @@ size_t uCParser::AddopContext::getRuleIndex() const {
   return uCParser::RuleAddop;
 }
 
-
-std::any uCParser::AddopContext::accept(tree::ParseTreeVisitor *visitor) {
-  if (auto parserVisitor = dynamic_cast<uCVisitor*>(visitor))
-    return parserVisitor->visitAddop(this);
-  else
-    return visitor->visitChildren(this);
-}
 
 uCParser::AddopContext* uCParser::addop() {
   AddopContext *_localctx = _tracker.createInstance<AddopContext>(_ctx, getState());

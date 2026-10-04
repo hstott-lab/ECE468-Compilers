@@ -1,43 +1,23 @@
 #include <fstream>
-#include <string>
-#include <any>
-#include <fstream>
-#include <iostream>
 #include "antlr4-runtime.h"
 #include "uCLexer.h"
 #include "uCParser.h"
-#include "uCBaseVisitor.h"
-
-class CodeGen : public uCBaseVisitor {
-public:
-  explicit CodeGen(std::ostream &out) : out(out) {}
-
-  private:
-  std::ostream &out;
-};
-
 
 int main(int argc, char **argv) {
-  if (argc < 3) {
-    std::cerr << "usage: " << argv[0] << " input output\n";
-    return 1;
-  }
-
   std::ifstream in{argv[1]};
   std::ofstream out{argv[2]};
 
   antlr4::ANTLRInputStream input(in);
   uCLexer lexer(&input);
+  lexer.removeErrorListeners();
   antlr4::CommonTokenStream tokens(&lexer);
   uCParser parser(&tokens);
+  parser.removeErrorListeners();
 
-  auto *tree = parser.program();   // start rule
+  parser.program();
 
-  if (parser.getNumberOfSyntaxErrors() > 0) {
-    return 1;                      // ANTLR already printed the errors to stderr
-  }
-
-  CodeGen gen(out);
-  gen.visit(tree);
+  bool ok = lexer.getNumberOfSyntaxErrors() == 0 &&
+            parser.getNumberOfSyntaxErrors() == 0;
+  out << (ok ? "Accepted" : "Not Accepted") << "\n";
   return 0;
 }
