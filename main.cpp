@@ -9,10 +9,10 @@ int main(int argc, char **argv) {
 
   antlr4::ANTLRInputStream input(in);
   uCLexer lexer(&input);
-  lexer.removeErrorListeners();
+  //lexer.removeErrorListeners();
   antlr4::CommonTokenStream tokens(&lexer);
   uCParser parser(&tokens);
-  parser.removeErrorListeners();
+  //parser.removeErrorListeners();
 
   parser.program();
 

@@ -4,7 +4,7 @@ grammar uC;
  
 }
 
-program : decls function;
+program : decls function EOF;
 
 /* Declarations */
 decls : var_decl decls
@@ -71,7 +71,7 @@ expr : term
 	 
 /* This is left recursive, but ANTLR will clean this up */
 term : primary
-     | term mulop primary ';' ;
+     | term mulop primary  ;
 	   	   
 cond : expr cmpop expr ;
 

@@ -76,61 +76,61 @@ void ucParserInitialize() {
   	4,1,32,197,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,
   	7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,
   	14,2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,
-  	21,2,22,7,22,2,23,7,23,2,24,7,24,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,1,1,
-  	1,1,3,1,61,8,1,1,2,1,2,1,2,1,2,3,2,67,8,2,1,3,1,3,1,4,1,4,1,4,1,4,1,5,
-  	1,5,1,5,1,5,1,5,1,5,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,8,1,8,1,
-  	8,1,8,3,8,95,8,8,1,9,1,9,1,9,1,9,1,9,3,9,102,8,9,1,10,1,10,1,10,1,10,
-  	3,10,108,8,10,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,13,
-  	1,13,1,13,1,14,1,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,15,
-  	1,15,1,15,1,15,1,15,3,15,139,8,15,1,16,1,16,1,16,1,16,1,16,1,16,1,16,
-  	1,16,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,3,17,157,8,17,1,18,1,18,
-  	1,18,1,19,1,19,1,19,1,19,1,19,1,19,1,19,5,19,169,8,19,10,19,12,19,172,
-  	9,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,1,20,5,20,182,8,20,10,20,12,20,
+  	21,2,22,7,22,2,23,7,23,2,24,7,24,1,0,1,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,
+  	1,1,1,1,3,1,62,8,1,1,2,1,2,1,2,1,2,3,2,68,8,2,1,3,1,3,1,4,1,4,1,4,1,4,
+  	1,5,1,5,1,5,1,5,1,5,1,5,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,7,1,8,1,
+  	8,1,8,1,8,3,8,96,8,8,1,9,1,9,1,9,1,9,1,9,3,9,103,8,9,1,10,1,10,1,10,1,
+  	10,3,10,109,8,10,1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,1,
+  	13,1,13,1,13,1,14,1,14,1,14,1,14,1,15,1,15,1,15,1,15,1,15,1,15,1,15,1,
+  	15,1,15,1,15,1,15,1,15,3,15,140,8,15,1,16,1,16,1,16,1,16,1,16,1,16,1,
+  	16,1,16,1,17,1,17,1,17,1,17,1,17,1,17,1,17,1,17,3,17,158,8,17,1,18,1,
+  	18,1,18,1,19,1,19,1,19,1,19,1,19,1,19,1,19,5,19,170,8,19,10,19,12,19,
+  	173,9,19,1,20,1,20,1,20,1,20,1,20,1,20,1,20,5,20,182,8,20,10,20,12,20,
   	185,9,20,1,21,1,21,1,21,1,21,1,22,1,22,1,23,1,23,1,24,1,24,1,24,0,2,38,
   	40,25,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,
   	46,48,0,4,1,0,4,5,1,0,18,23,1,0,24,25,2,0,17,17,26,26,187,0,50,1,0,0,
-  	0,2,60,1,0,0,0,4,66,1,0,0,0,6,68,1,0,0,0,8,70,1,0,0,0,10,74,1,0,0,0,12,
-  	80,1,0,0,0,14,82,1,0,0,0,16,94,1,0,0,0,18,101,1,0,0,0,20,107,1,0,0,0,
-  	22,109,1,0,0,0,24,114,1,0,0,0,26,119,1,0,0,0,28,122,1,0,0,0,30,126,1,
-  	0,0,0,32,140,1,0,0,0,34,156,1,0,0,0,36,158,1,0,0,0,38,161,1,0,0,0,40,
-  	173,1,0,0,0,42,186,1,0,0,0,44,190,1,0,0,0,46,192,1,0,0,0,48,194,1,0,0,
-  	0,50,51,3,2,1,0,51,52,3,14,7,0,52,1,1,0,0,0,53,54,3,8,4,0,54,55,3,2,1,
-  	0,55,61,1,0,0,0,56,57,3,10,5,0,57,58,3,2,1,0,58,61,1,0,0,0,59,61,1,0,
-  	0,0,60,53,1,0,0,0,60,56,1,0,0,0,60,59,1,0,0,0,61,3,1,0,0,0,62,63,3,8,
-  	4,0,63,64,3,4,2,0,64,67,1,0,0,0,65,67,1,0,0,0,66,62,1,0,0,0,66,65,1,0,
-  	0,0,67,5,1,0,0,0,68,69,5,27,0,0,69,7,1,0,0,0,70,71,3,12,6,0,71,72,3,6,
-  	3,0,72,73,5,1,0,0,73,9,1,0,0,0,74,75,5,2,0,0,75,76,3,6,3,0,76,77,5,3,
-  	0,0,77,78,5,30,0,0,78,79,5,1,0,0,79,11,1,0,0,0,80,81,7,0,0,0,81,13,1,
-  	0,0,0,82,83,5,4,0,0,83,84,5,6,0,0,84,85,5,7,0,0,85,86,5,8,0,0,86,87,5,
-  	9,0,0,87,88,3,16,8,0,88,89,5,10,0,0,89,15,1,0,0,0,90,91,3,18,9,0,91,92,
-  	3,16,8,0,92,95,1,0,0,0,93,95,1,0,0,0,94,90,1,0,0,0,94,93,1,0,0,0,95,17,
-  	1,0,0,0,96,97,3,20,10,0,97,98,5,1,0,0,98,102,1,0,0,0,99,102,3,30,15,0,
-  	100,102,3,32,16,0,101,96,1,0,0,0,101,99,1,0,0,0,101,100,1,0,0,0,102,19,
-  	1,0,0,0,103,108,3,28,14,0,104,108,3,22,11,0,105,108,3,24,12,0,106,108,
-  	3,26,13,0,107,103,1,0,0,0,107,104,1,0,0,0,107,105,1,0,0,0,107,106,1,0,
-  	0,0,108,21,1,0,0,0,109,110,5,11,0,0,110,111,5,7,0,0,111,112,3,6,3,0,112,
-  	113,5,8,0,0,113,23,1,0,0,0,114,115,5,12,0,0,115,116,5,7,0,0,116,117,3,
-  	38,19,0,117,118,5,8,0,0,118,25,1,0,0,0,119,120,5,13,0,0,120,121,3,38,
-  	19,0,121,27,1,0,0,0,122,123,3,6,3,0,123,124,5,3,0,0,124,125,3,38,19,0,
-  	125,29,1,0,0,0,126,127,5,14,0,0,127,128,5,7,0,0,128,129,3,42,21,0,129,
-  	130,5,8,0,0,130,131,5,9,0,0,131,132,3,16,8,0,132,138,5,10,0,0,133,134,
-  	5,15,0,0,134,135,5,9,0,0,135,136,3,16,8,0,136,137,5,10,0,0,137,139,1,
-  	0,0,0,138,133,1,0,0,0,138,139,1,0,0,0,139,31,1,0,0,0,140,141,5,16,0,0,
-  	141,142,5,7,0,0,142,143,3,42,21,0,143,144,5,8,0,0,144,145,5,9,0,0,145,
-  	146,3,16,8,0,146,147,5,10,0,0,147,33,1,0,0,0,148,157,3,6,3,0,149,150,
-  	5,7,0,0,150,151,3,38,19,0,151,152,5,8,0,0,152,157,1,0,0,0,153,157,3,36,
-  	18,0,154,157,5,28,0,0,155,157,5,29,0,0,156,148,1,0,0,0,156,149,1,0,0,
-  	0,156,153,1,0,0,0,156,154,1,0,0,0,156,155,1,0,0,0,157,35,1,0,0,0,158,
-  	159,5,17,0,0,159,160,3,38,19,0,160,37,1,0,0,0,161,162,6,19,-1,0,162,163,
-  	3,40,20,0,163,170,1,0,0,0,164,165,10,1,0,0,165,166,3,48,24,0,166,167,
-  	3,40,20,0,167,169,1,0,0,0,168,164,1,0,0,0,169,172,1,0,0,0,170,168,1,0,
-  	0,0,170,171,1,0,0,0,171,39,1,0,0,0,172,170,1,0,0,0,173,174,6,20,-1,0,
-  	174,175,3,34,17,0,175,183,1,0,0,0,176,177,10,1,0,0,177,178,3,46,23,0,
-  	178,179,3,34,17,0,179,180,5,1,0,0,180,182,1,0,0,0,181,176,1,0,0,0,182,
+  	0,2,61,1,0,0,0,4,67,1,0,0,0,6,69,1,0,0,0,8,71,1,0,0,0,10,75,1,0,0,0,12,
+  	81,1,0,0,0,14,83,1,0,0,0,16,95,1,0,0,0,18,102,1,0,0,0,20,108,1,0,0,0,
+  	22,110,1,0,0,0,24,115,1,0,0,0,26,120,1,0,0,0,28,123,1,0,0,0,30,127,1,
+  	0,0,0,32,141,1,0,0,0,34,157,1,0,0,0,36,159,1,0,0,0,38,162,1,0,0,0,40,
+  	174,1,0,0,0,42,186,1,0,0,0,44,190,1,0,0,0,46,192,1,0,0,0,48,194,1,0,0,
+  	0,50,51,3,2,1,0,51,52,3,14,7,0,52,53,5,0,0,1,53,1,1,0,0,0,54,55,3,8,4,
+  	0,55,56,3,2,1,0,56,62,1,0,0,0,57,58,3,10,5,0,58,59,3,2,1,0,59,62,1,0,
+  	0,0,60,62,1,0,0,0,61,54,1,0,0,0,61,57,1,0,0,0,61,60,1,0,0,0,62,3,1,0,
+  	0,0,63,64,3,8,4,0,64,65,3,4,2,0,65,68,1,0,0,0,66,68,1,0,0,0,67,63,1,0,
+  	0,0,67,66,1,0,0,0,68,5,1,0,0,0,69,70,5,27,0,0,70,7,1,0,0,0,71,72,3,12,
+  	6,0,72,73,3,6,3,0,73,74,5,1,0,0,74,9,1,0,0,0,75,76,5,2,0,0,76,77,3,6,
+  	3,0,77,78,5,3,0,0,78,79,5,30,0,0,79,80,5,1,0,0,80,11,1,0,0,0,81,82,7,
+  	0,0,0,82,13,1,0,0,0,83,84,5,4,0,0,84,85,5,6,0,0,85,86,5,7,0,0,86,87,5,
+  	8,0,0,87,88,5,9,0,0,88,89,3,16,8,0,89,90,5,10,0,0,90,15,1,0,0,0,91,92,
+  	3,18,9,0,92,93,3,16,8,0,93,96,1,0,0,0,94,96,1,0,0,0,95,91,1,0,0,0,95,
+  	94,1,0,0,0,96,17,1,0,0,0,97,98,3,20,10,0,98,99,5,1,0,0,99,103,1,0,0,0,
+  	100,103,3,30,15,0,101,103,3,32,16,0,102,97,1,0,0,0,102,100,1,0,0,0,102,
+  	101,1,0,0,0,103,19,1,0,0,0,104,109,3,28,14,0,105,109,3,22,11,0,106,109,
+  	3,24,12,0,107,109,3,26,13,0,108,104,1,0,0,0,108,105,1,0,0,0,108,106,1,
+  	0,0,0,108,107,1,0,0,0,109,21,1,0,0,0,110,111,5,11,0,0,111,112,5,7,0,0,
+  	112,113,3,6,3,0,113,114,5,8,0,0,114,23,1,0,0,0,115,116,5,12,0,0,116,117,
+  	5,7,0,0,117,118,3,38,19,0,118,119,5,8,0,0,119,25,1,0,0,0,120,121,5,13,
+  	0,0,121,122,3,38,19,0,122,27,1,0,0,0,123,124,3,6,3,0,124,125,5,3,0,0,
+  	125,126,3,38,19,0,126,29,1,0,0,0,127,128,5,14,0,0,128,129,5,7,0,0,129,
+  	130,3,42,21,0,130,131,5,8,0,0,131,132,5,9,0,0,132,133,3,16,8,0,133,139,
+  	5,10,0,0,134,135,5,15,0,0,135,136,5,9,0,0,136,137,3,16,8,0,137,138,5,
+  	10,0,0,138,140,1,0,0,0,139,134,1,0,0,0,139,140,1,0,0,0,140,31,1,0,0,0,
+  	141,142,5,16,0,0,142,143,5,7,0,0,143,144,3,42,21,0,144,145,5,8,0,0,145,
+  	146,5,9,0,0,146,147,3,16,8,0,147,148,5,10,0,0,148,33,1,0,0,0,149,158,
+  	3,6,3,0,150,151,5,7,0,0,151,152,3,38,19,0,152,153,5,8,0,0,153,158,1,0,
+  	0,0,154,158,3,36,18,0,155,158,5,28,0,0,156,158,5,29,0,0,157,149,1,0,0,
+  	0,157,150,1,0,0,0,157,154,1,0,0,0,157,155,1,0,0,0,157,156,1,0,0,0,158,
+  	35,1,0,0,0,159,160,5,17,0,0,160,161,3,38,19,0,161,37,1,0,0,0,162,163,
+  	6,19,-1,0,163,164,3,40,20,0,164,171,1,0,0,0,165,166,10,1,0,0,166,167,
+  	3,48,24,0,167,168,3,40,20,0,168,170,1,0,0,0,169,165,1,0,0,0,170,173,1,
+  	0,0,0,171,169,1,0,0,0,171,172,1,0,0,0,172,39,1,0,0,0,173,171,1,0,0,0,
+  	174,175,6,20,-1,0,175,176,3,34,17,0,176,183,1,0,0,0,177,178,10,1,0,0,
+  	178,179,3,46,23,0,179,180,3,34,17,0,180,182,1,0,0,0,181,177,1,0,0,0,182,
   	185,1,0,0,0,183,181,1,0,0,0,183,184,1,0,0,0,184,41,1,0,0,0,185,183,1,
   	0,0,0,186,187,3,38,19,0,187,188,3,44,22,0,188,189,3,38,19,0,189,43,1,
   	0,0,0,190,191,7,1,0,0,191,45,1,0,0,0,192,193,7,2,0,0,193,47,1,0,0,0,194,
-  	195,7,3,0,0,195,49,1,0,0,0,9,60,66,94,101,107,138,156,170,183
+  	195,7,3,0,0,195,49,1,0,0,0,9,61,67,95,102,108,139,157,171,183
   };
   staticData->serializedATN = antlr4::atn::SerializedATNView(serializedATNSegment, sizeof(serializedATNSegment) / sizeof(serializedATNSegment[0]));
 
@@ -193,6 +193,10 @@ uCParser::FunctionContext* uCParser::ProgramContext::function() {
   return getRuleContext<uCParser::FunctionContext>(0);
 }
 
+tree::TerminalNode* uCParser::ProgramContext::EOF() {
+  return getToken(uCParser::EOF, 0);
+}
+
 
 size_t uCParser::ProgramContext::getRuleIndex() const {
   return uCParser::RuleProgram;
@@ -216,6 +220,8 @@ uCParser::ProgramContext* uCParser::program() {
     decls();
     setState(51);
     function();
+    setState(52);
+    match(uCParser::EOF);
    
   }
   catch (RecognitionException &e) {
@@ -263,23 +269,23 @@ uCParser::DeclsContext* uCParser::decls() {
     exitRule();
   });
   try {
-    setState(60);
+    setState(61);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 0, _ctx)) {
     case 1: {
       enterOuterAlt(_localctx, 1);
-      setState(53);
-      var_decl();
       setState(54);
+      var_decl();
+      setState(55);
       decls();
       break;
     }
 
     case 2: {
       enterOuterAlt(_localctx, 2);
-      setState(56);
-      str_decl();
       setState(57);
+      str_decl();
+      setState(58);
       decls();
       break;
     }
@@ -336,14 +342,14 @@ uCParser::Var_declsContext* uCParser::var_decls() {
     exitRule();
   });
   try {
-    setState(66);
+    setState(67);
     _errHandler->sync(this);
     switch (getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 1, _ctx)) {
     case 1: {
       enterOuterAlt(_localctx, 1);
-      setState(62);
-      var_decl();
       setState(63);
+      var_decl();
+      setState(64);
       var_decls();
       break;
     }
@@ -397,7 +403,7 @@ uCParser::IdentContext* uCParser::ident() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(68);
+    setState(69);
     match(uCParser::IDENTIFIER);
    
   }
@@ -443,11 +449,11 @@ uCParser::Var_declContext* uCParser::var_decl() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(70);
-    base_type();
     setState(71);
-    ident();
+    base_type();
     setState(72);
+    ident();
+    setState(73);
     match(uCParser::T__0);
    
   }
@@ -493,15 +499,15 @@ uCParser::Str_declContext* uCParser::str_decl() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(74);
-    match(uCParser::T__1);
     setState(75);
-    ident();
+    match(uCParser::T__1);
     setState(76);
-    match(uCParser::T__2);
+    ident();
     setState(77);
-    match(uCParser::STR_LITERAL);
+    match(uCParser::T__2);
     setState(78);
+    match(uCParser::STR_LITERAL);
+    setState(79);
     match(uCParser::T__0);
    
   }
@@ -540,7 +546,7 @@ uCParser::Base_typeContext* uCParser::base_type() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(80);
+    setState(81);
     _la = _input->LA(1);
     if (!(_la == uCParser::T__3
 
@@ -591,19 +597,19 @@ uCParser::FunctionContext* uCParser::function() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(82);
-    match(uCParser::T__3);
     setState(83);
-    match(uCParser::T__5);
+    match(uCParser::T__3);
     setState(84);
-    match(uCParser::T__6);
+    match(uCParser::T__5);
     setState(85);
-    match(uCParser::T__7);
+    match(uCParser::T__6);
     setState(86);
-    match(uCParser::T__8);
+    match(uCParser::T__7);
     setState(87);
-    statements();
+    match(uCParser::T__8);
     setState(88);
+    statements();
+    setState(89);
     match(uCParser::T__9);
    
   }
@@ -648,7 +654,7 @@ uCParser::StatementsContext* uCParser::statements() {
     exitRule();
   });
   try {
-    setState(94);
+    setState(95);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case uCParser::T__10:
@@ -658,9 +664,9 @@ uCParser::StatementsContext* uCParser::statements() {
       case uCParser::T__15:
       case uCParser::IDENTIFIER: {
         enterOuterAlt(_localctx, 1);
-        setState(90);
-        statement();
         setState(91);
+        statement();
+        setState(92);
         statements();
         break;
       }
@@ -721,7 +727,7 @@ uCParser::StatementContext* uCParser::statement() {
     exitRule();
   });
   try {
-    setState(101);
+    setState(102);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case uCParser::T__10:
@@ -729,23 +735,23 @@ uCParser::StatementContext* uCParser::statement() {
       case uCParser::T__12:
       case uCParser::IDENTIFIER: {
         enterOuterAlt(_localctx, 1);
-        setState(96);
-        base_stmt();
         setState(97);
+        base_stmt();
+        setState(98);
         match(uCParser::T__0);
         break;
       }
 
       case uCParser::T__13: {
         enterOuterAlt(_localctx, 2);
-        setState(99);
+        setState(100);
         if_stmt();
         break;
       }
 
       case uCParser::T__15: {
         enterOuterAlt(_localctx, 3);
-        setState(100);
+        setState(101);
         while_stmt();
         break;
       }
@@ -804,33 +810,33 @@ uCParser::Base_stmtContext* uCParser::base_stmt() {
     exitRule();
   });
   try {
-    setState(107);
+    setState(108);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case uCParser::IDENTIFIER: {
         enterOuterAlt(_localctx, 1);
-        setState(103);
+        setState(104);
         assign_stmt();
         break;
       }
 
       case uCParser::T__10: {
         enterOuterAlt(_localctx, 2);
-        setState(104);
+        setState(105);
         read_stmt();
         break;
       }
 
       case uCParser::T__11: {
         enterOuterAlt(_localctx, 3);
-        setState(105);
+        setState(106);
         print_stmt();
         break;
       }
 
       case uCParser::T__12: {
         enterOuterAlt(_localctx, 4);
-        setState(106);
+        setState(107);
         return_stmt();
         break;
       }
@@ -878,13 +884,13 @@ uCParser::Read_stmtContext* uCParser::read_stmt() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(109);
-    match(uCParser::T__10);
     setState(110);
-    match(uCParser::T__6);
+    match(uCParser::T__10);
     setState(111);
-    ident();
+    match(uCParser::T__6);
     setState(112);
+    ident();
+    setState(113);
     match(uCParser::T__7);
    
   }
@@ -926,13 +932,13 @@ uCParser::Print_stmtContext* uCParser::print_stmt() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(114);
-    match(uCParser::T__11);
     setState(115);
-    match(uCParser::T__6);
+    match(uCParser::T__11);
     setState(116);
-    expr(0);
+    match(uCParser::T__6);
     setState(117);
+    expr(0);
+    setState(118);
     match(uCParser::T__7);
    
   }
@@ -974,9 +980,9 @@ uCParser::Return_stmtContext* uCParser::return_stmt() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(119);
-    match(uCParser::T__12);
     setState(120);
+    match(uCParser::T__12);
+    setState(121);
     expr(0);
    
   }
@@ -1022,11 +1028,11 @@ uCParser::Assign_stmtContext* uCParser::assign_stmt() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(122);
-    ident();
     setState(123);
-    match(uCParser::T__2);
+    ident();
     setState(124);
+    match(uCParser::T__2);
+    setState(125);
     expr(0);
    
   }
@@ -1077,32 +1083,32 @@ uCParser::If_stmtContext* uCParser::if_stmt() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(126);
-    match(uCParser::T__13);
     setState(127);
-    match(uCParser::T__6);
+    match(uCParser::T__13);
     setState(128);
-    cond();
+    match(uCParser::T__6);
     setState(129);
-    match(uCParser::T__7);
+    cond();
     setState(130);
-    match(uCParser::T__8);
+    match(uCParser::T__7);
     setState(131);
-    statements();
+    match(uCParser::T__8);
     setState(132);
+    statements();
+    setState(133);
     match(uCParser::T__9);
-    setState(138);
+    setState(139);
     _errHandler->sync(this);
 
     _la = _input->LA(1);
     if (_la == uCParser::T__14) {
-      setState(133);
-      match(uCParser::T__14);
       setState(134);
-      match(uCParser::T__8);
+      match(uCParser::T__14);
       setState(135);
-      statements();
+      match(uCParser::T__8);
       setState(136);
+      statements();
+      setState(137);
       match(uCParser::T__9);
     }
    
@@ -1149,19 +1155,19 @@ uCParser::While_stmtContext* uCParser::while_stmt() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(140);
-    match(uCParser::T__15);
     setState(141);
-    match(uCParser::T__6);
+    match(uCParser::T__15);
     setState(142);
-    cond();
+    match(uCParser::T__6);
     setState(143);
-    match(uCParser::T__7);
+    cond();
     setState(144);
-    match(uCParser::T__8);
+    match(uCParser::T__7);
     setState(145);
-    statements();
+    match(uCParser::T__8);
     setState(146);
+    statements();
+    setState(147);
     match(uCParser::T__9);
    
   }
@@ -1218,44 +1224,44 @@ uCParser::PrimaryContext* uCParser::primary() {
     exitRule();
   });
   try {
-    setState(156);
+    setState(157);
     _errHandler->sync(this);
     switch (_input->LA(1)) {
       case uCParser::IDENTIFIER: {
         enterOuterAlt(_localctx, 1);
-        setState(148);
+        setState(149);
         ident();
         break;
       }
 
       case uCParser::T__6: {
         enterOuterAlt(_localctx, 2);
-        setState(149);
-        match(uCParser::T__6);
         setState(150);
-        expr(0);
+        match(uCParser::T__6);
         setState(151);
+        expr(0);
+        setState(152);
         match(uCParser::T__7);
         break;
       }
 
       case uCParser::T__16: {
         enterOuterAlt(_localctx, 3);
-        setState(153);
+        setState(154);
         unaryminus_expr();
         break;
       }
 
       case uCParser::INT_LITERAL: {
         enterOuterAlt(_localctx, 4);
-        setState(154);
+        setState(155);
         match(uCParser::INT_LITERAL);
         break;
       }
 
       case uCParser::FLOAT_LITERAL: {
         enterOuterAlt(_localctx, 5);
-        setState(155);
+        setState(156);
         match(uCParser::FLOAT_LITERAL);
         break;
       }
@@ -1303,9 +1309,9 @@ uCParser::Unaryminus_exprContext* uCParser::unaryminus_expr() {
   });
   try {
     enterOuterAlt(_localctx, 1);
-    setState(158);
-    match(uCParser::T__16);
     setState(159);
+    match(uCParser::T__16);
+    setState(160);
     expr(0);
    
   }
@@ -1368,10 +1374,10 @@ uCParser::ExprContext* uCParser::expr(int precedence) {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(162);
+    setState(163);
     term(0);
     _ctx->stop = _input->LT(-1);
-    setState(170);
+    setState(171);
     _errHandler->sync(this);
     alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 7, _ctx);
     while (alt != 2 && alt != atn::ATN::INVALID_ALT_NUMBER) {
@@ -1381,15 +1387,15 @@ uCParser::ExprContext* uCParser::expr(int precedence) {
         previousContext = _localctx;
         _localctx = _tracker.createInstance<ExprContext>(parentContext, parentState);
         pushNewRecursionContext(_localctx, startState, RuleExpr);
-        setState(164);
+        setState(165);
 
         if (!(precpred(_ctx, 1))) throw FailedPredicateException(this, "precpred(_ctx, 1)");
-        setState(165);
-        addop();
         setState(166);
+        addop();
+        setState(167);
         term(0); 
       }
-      setState(172);
+      setState(173);
       _errHandler->sync(this);
       alt = getInterpreter<atn::ParserATNSimulator>()->adaptivePredict(_input, 7, _ctx);
     }
@@ -1452,7 +1458,7 @@ uCParser::TermContext* uCParser::term(int precedence) {
   try {
     size_t alt;
     enterOuterAlt(_localctx, 1);
-    setState(174);
+    setState(175);
     primary();
     _ctx->stop = _input->LT(-1);
     setState(183);
@@ -1465,15 +1471,13 @@ uCParser::TermContext* uCParser::term(int precedence) {
         previousContext = _localctx;
         _localctx = _tracker.createInstance<TermContext>(parentContext, parentState);
         pushNewRecursionContext(_localctx, startState, RuleTerm);
-        setState(176);
+        setState(177);
 
         if (!(precpred(_ctx, 1))) throw FailedPredicateException(this, "precpred(_ctx, 1)");
-        setState(177);
-        mulop();
         setState(178);
-        primary();
+        mulop();
         setState(179);
-        match(uCParser::T__0); 
+        primary(); 
       }
       setState(185);
       _errHandler->sync(this);

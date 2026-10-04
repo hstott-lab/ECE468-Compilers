@@ -81,6 +81,7 @@ public:
     virtual size_t getRuleIndex() const override;
     DeclsContext *decls();
     FunctionContext *function();
+    antlr4::tree::TerminalNode *EOF();
 
    
   };
