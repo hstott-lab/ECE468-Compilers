@@ -6,6 +6,8 @@
 #include "Symbol_table.h"
 #include "Symbol_Retrieve.h"
 #include <iostream>
+#include "print_ast.h"
+#include <vector>
 
 
 int main(int argc, char **argv) {
@@ -37,7 +39,10 @@ for (auto &n : table.order) {
   std::cerr << "\n";
 }
 
+std::vector<AST*> statements;
 for (AST *stmt : statements) printAST(stmt);
   
+
+std::cout<<"hjello"<<std::endl;
   return 0;
 }

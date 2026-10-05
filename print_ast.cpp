@@ -1,8 +1,7 @@
 #include <iostream>
-#include "ast.h"
-#include "Symbol_table.h"
+#include "print_ast.h"
 
-void printAST(const AST *n, int depth = 0) {
+void printAST(const AST *n, int depth) {
   std::string pad(depth * 2, ' ');
 
   if (auto *i = dynamic_cast<const Int *>(n)) {
