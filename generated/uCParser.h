@@ -83,6 +83,8 @@ public:
     FunctionContext *function();
     antlr4::tree::TerminalNode *EOF();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -96,6 +98,8 @@ public:
     DeclsContext *decls();
     Str_declContext *str_decl();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -108,6 +112,8 @@ public:
     Var_declContext *var_decl();
     Var_declsContext *var_decls();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -119,6 +125,8 @@ public:
     virtual size_t getRuleIndex() const override;
     antlr4::tree::TerminalNode *IDENTIFIER();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -131,6 +139,8 @@ public:
     Base_typeContext *base_type();
     IdentContext *ident();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -143,6 +153,8 @@ public:
     IdentContext *ident();
     antlr4::tree::TerminalNode *STR_LITERAL();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -153,6 +165,8 @@ public:
     Base_typeContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -164,6 +178,8 @@ public:
     virtual size_t getRuleIndex() const override;
     StatementsContext *statements();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -176,6 +192,8 @@ public:
     StatementContext *statement();
     StatementsContext *statements();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -189,6 +207,8 @@ public:
     If_stmtContext *if_stmt();
     While_stmtContext *while_stmt();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -203,6 +223,8 @@ public:
     Print_stmtContext *print_stmt();
     Return_stmtContext *return_stmt();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -214,6 +236,8 @@ public:
     virtual size_t getRuleIndex() const override;
     IdentContext *ident();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -225,6 +249,8 @@ public:
     virtual size_t getRuleIndex() const override;
     ExprContext *expr();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -236,6 +262,8 @@ public:
     virtual size_t getRuleIndex() const override;
     ExprContext *expr();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -248,6 +276,8 @@ public:
     IdentContext *ident();
     ExprContext *expr();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -261,6 +291,8 @@ public:
     std::vector<StatementsContext *> statements();
     StatementsContext* statements(size_t i);
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -273,6 +305,8 @@ public:
     CondContext *cond();
     StatementsContext *statements();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -288,6 +322,8 @@ public:
     antlr4::tree::TerminalNode *INT_LITERAL();
     antlr4::tree::TerminalNode *FLOAT_LITERAL();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -299,6 +335,8 @@ public:
     virtual size_t getRuleIndex() const override;
     ExprContext *expr();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -312,6 +350,8 @@ public:
     ExprContext *expr();
     AddopContext *addop();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -325,6 +365,8 @@ public:
     TermContext *term();
     MulopContext *mulop();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -338,6 +380,8 @@ public:
     ExprContext* expr(size_t i);
     CmpopContext *cmpop();
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -348,6 +392,8 @@ public:
     CmpopContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -358,6 +404,8 @@ public:
     MulopContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 
@@ -368,6 +416,8 @@ public:
     AddopContext(antlr4::ParserRuleContext *parent, size_t invokingState);
     virtual size_t getRuleIndex() const override;
 
+
+    virtual std::any accept(antlr4::tree::ParseTreeVisitor *visitor) override;
    
   };
 

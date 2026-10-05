@@ -2,6 +2,11 @@
 #include "antlr4-runtime.h"
 #include "uCLexer.h"
 #include "uCParser.h"
+#include "ast.h"
+#include "Symbol_table.h"
+#include "Symbol_Retrieve.h"
+#include <iostream>
+
 
 int main(int argc, char **argv) {
   std::ifstream in{argv[1]};
@@ -14,10 +19,25 @@ int main(int argc, char **argv) {
   uCParser parser(&tokens);
   //parser.removeErrorListeners();
 
-  parser.program();
+  auto *tree = parser.program();
+
+  SymbolTable table;
+  SymbolRetrieve retrieve(table);
+  retrieve.visit(tree);
 
   bool ok = lexer.getNumberOfSyntaxErrors() == 0 &&
             parser.getNumberOfSyntaxErrors() == 0;
   out << (ok ? "Accepted" : "Not Accepted") << "\n";
+
+for (auto &n : table.order) {
+  const Symbol *s = table.getSymbol(n);
+  std::cerr << n << " type=" << (int)s->type
+            << " addr=0x" << std::hex << s->address << std::dec;
+  if (s->type == Type::String) std::cerr << " value=" << s->value;
+  std::cerr << "\n";
+}
+
+for (AST *stmt : statements) printAST(stmt);
+  
   return 0;
 }
