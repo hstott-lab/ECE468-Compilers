@@ -8,6 +8,7 @@
 #include <iostream>
 #include "print_ast.h"
 #include <vector>
+#include "ast_builder.h"
 
 
 int main(int argc, char **argv) {
@@ -39,10 +40,10 @@ for (auto &n : table.order) {
   std::cerr << "\n";
 }
 
-std::vector<AST*> statements;
-for (AST *stmt : statements) printAST(stmt);
-  
+ASTBuilder builder;
+builder.visit(tree);
+for (AST *s : builder.statements) printAST(s);
 
-std::cout<<"hjello"<<std::endl;
+
   return 0;
 }

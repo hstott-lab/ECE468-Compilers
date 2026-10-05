@@ -1,5 +1,5 @@
 SRCS = main.cpp Symbol_table.cpp Symbol_Retrieve.cpp print_ast.cpp
-HDRS = ast.h Symbol_table.h Symbol_Retrieve.h print_ast.h
+HDRS = ast.h Symbol_table.h Symbol_Retrieve.h print_ast.h ast_builder.h
 
 compiler: $(SRCS) $(HDRS) uC.g4
 	antlr -Dlanguage=Cpp -no-listener -visitor -o generated uC.g4
