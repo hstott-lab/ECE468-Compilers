@@ -9,9 +9,9 @@ struct Float : AST {float value; };
 struct Var : AST {std::string name; };
 struct Arith : AST {char op; AST *lhs; AST *rhs; };
 
-struct Assign : AST {AST *target; AST *value; };
+struct Assign : AST {Var *target; AST *value; };
 struct Print : AST {AST *value; };
-struct Read : AST {AST *target; };
+struct Read : AST {Var *target; };
 struct Return : AST {AST *value; };
 
 
