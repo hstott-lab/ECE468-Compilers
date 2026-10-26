@@ -1,63 +1,107 @@
 #include "IR_Gen.h"
 #include <typeinfo>
+#include <iostream>
 
 
-int IRgen::newTemp(Type type) {
+int IRGen::newTemp(Type type) {
     return type == Type::Float ? nextFloatTemp++ : nextIntTemp++;
 }
 
-void IRgen::genStmt(AST *node) {
-    if(auto *i = dynamic_cast<Assign*>(node)) {
-         // 1. compute the right-hand side; the value ends up in a temp
-    ExprResult r = genExpr(as->value);
+void IRGen::genStmt(AST *node) {
+      if (auto *as = dynamic_cast<Assign *>(node)) {
+        // 1. compute the right-hand side
+        ExprResult r = genExpr(as->value);
 
-    // 2. look up the target variable (left of the =)
-    const Symbol *s = table.getSymbol(as->target->name);
-    if (!s) return;   // undeclared variable; report an error here if you want
+        // 2. look up the target variable
+        const Symbol *s = table.getSymbol(as->target->name);
+        if (!s) {
+            std::cerr << "Error: undeclared variable " << as->target->name << "\n";
+            return;
+        }
 
-    // 3. load the target's address into an int temp
-    int addr = newTemp(Type::Int);
-    IRInstr la;
-    la.op = Op::LoadAddr;
-    la.dest = addr;
-    la.imm = s->address;
-    emit(la);
+        // 3. load the target's address
+        int addr = newTemp(Type::Int);
+        IRInstr la;
+        la.op = Op::LoadAddr;
+        la.dest = addr;
+        la.imm = s->address;
+        emit(la);
 
-    // 4. store the value at that address
-    IRInstr st;
-    st.op = Op::Store;
-    st.a = r.temp;                         // the value to store
-    st.b = addr;                           // the address temp
-    st.isFloat = (s->type == Type::Float);
-    emit(st);
-    return;
+        // 4. store the value at that address
+        IRInstr st;
+        st.op = Op::Store;
+        st.a = r.temp;                          // value
+        st.b = addr;                            // address temp
+        st.isFloat = (s->type == Type::Float);
+        emit(st);
+        return;
     }
-    if(auto *i = dynamic_cast<Print*>(node)) {
-        ExprResult p = genExpr(as->value);
+
+    // ---- print(expr) ----
+    if (auto *p = dynamic_cast<Print *>(node)) {
+        ExprResult r = genExpr(p->value);
 
         IRInstr pr;
-
-        switch (p.type) {
+        pr.a = r.temp;
+        switch (r.type) {
             case Type::Int:
                 pr.op = Op::PrintInt;
                 break;
             case Type::Float:
                 pr.op = Op::PrintFloat;
+                pr.isFloat = true;
                 break;
             case Type::String:
                 pr.op = Op::PrintStr;
                 break;
         }
-        pr.a = p.temp;
         emit(pr);
         return;
     }
 
+    // ---- read(var) ----
+    if (auto *rd = dynamic_cast<Read *>(node)) {
+        const Symbol *s = table.getSymbol(rd->target->name);
+        if (!s) {
+            std::cerr << "Error: undeclared variable " << rd->target->name << "\n";
+            return;
+        }
+        bool isF = (s->type == Type::Float);
 
+        // read into a new temp
+        int val = newTemp(s->type);
+        IRInstr in;
+        in.op = isF ? Op::ReadFloat : Op::ReadInt;
+        in.dest = val;
+        in.isFloat = isF;
+        emit(in);
 
+        // load the variable's address
+        int addr = newTemp(Type::Int);
+        IRInstr la;
+        la.op = Op::LoadAddr;
+        la.dest = addr;
+        la.imm = s->address;
+        emit(la);
+
+        // store the value
+        IRInstr st;
+        st.op = Op::Store;
+        st.a = val;
+        st.b = addr;
+        st.isFloat = isF;
+        emit(st);
+        return;
+    }
+
+    // ---- return: nothing to emit; finish() adds HALT ----
+   if (auto *ret = dynamic_cast<Return *>(node)) {
+    genExpr(ret->value);   // evaluates the value, emitting e.g. LI t3, 0
+    return;
+    }
 }
 
-ExprResult IRgen::genExpr(AST *node) {
+ExprResult IRGen::genExpr(AST *node) {
     if(auto *i = dynamic_cast<Int*>(node)) {
         int t = newTemp(Type::Int);
         IRInstr in; in.op = Op::LoadImmInt; in.dest = t; in.imm = i->value;
@@ -74,28 +118,31 @@ ExprResult IRgen::genExpr(AST *node) {
         emit(in);
         return {t, Type::Float};
     }
-    if(auto *v = dynamic_cast<Var*>(node)) {
+    if (auto *v = dynamic_cast<Var *>(node)) {
         const Symbol *s = table.getSymbol(v->name);
-        if(!s) {
-            std::cout<<"Error: Symbol not found: "<<v->name<<std::endl;
-            return {0, Type::Int}; // Return a default value in case of error
+        if (!s) {
+            std::cerr << "Error: Symbol not found: " << v->name << "\n";
+            return {-1, Type::Int};
         }
+
         int addrTemp = newTemp(Type::Int);
         IRInstr la;
         la.op = Op::LoadAddr;
         la.dest = addrTemp;
-        la.imm = s->addr;
+        la.imm = s->address;
         emit(la);
-        if (s->type == Type::String) {
+
+        if (s->type == Type::String)
             return {addrTemp, Type::String};
-        }
-        int Valtemp = newTemp(s->type);
+
+        int valTemp = newTemp(s->type);
         IRInstr ld;
         ld.op = Op::Load;
-        ld.dest = Valtemp;
-        ld.src = addrTemp;
+        ld.dest = valTemp;
+        ld.a = addrTemp;
+        ld.isFloat = (s->type == Type::Float);
         emit(ld);
-        return {Valtemp, s->type}; 
+        return {valTemp, s->type};
     }
    if (auto *a = dynamic_cast<Arith *>(node)) {
     // 1. generate both operands; each leaves its value in a temp
@@ -127,11 +174,17 @@ ExprResult IRgen::genExpr(AST *node) {
 
     return {t, rt};
 }
-        
+     
+return {-1, Type::Int}; // should never reach here
 
 }
 
-void IRgen::finish() {
-    IRInstr in; in.op = Op::Halt;
+void IRGen::finish() {
+    IRInstr in;
+    in.op = Op::Halt;
     emit(in);
+}
+
+void IRGen::emit(const IRInstr &i) {
+    code.push_back(i);
 }

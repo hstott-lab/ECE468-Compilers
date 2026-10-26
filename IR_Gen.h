@@ -3,7 +3,7 @@
 
 #include <vector>
 #include "ast.h"
-#include "ir.h"
+#include "IR.h"
 #include "Symbol_table.h"
 
 struct ExprResult {
@@ -11,10 +11,10 @@ struct ExprResult {
     Type type;
 };
 
-class IRgen {
+class IRGen {
 
-    public:
-    IRRgen(SymbolTable &table) : table(table) {}
+public:
+    IRGen(SymbolTable &table) : table(table) {}
 
     // Emit IR for one top-level statement (Assign, Print, Read, Return).
     void genStmt(AST *node);
@@ -34,6 +34,6 @@ private:
 
     int newTemp(Type type);      // allocates from the right counter
     void emit(const IRInstr &i); // appends to code
-}
+};
 
 #endif // IR_GEN_H
