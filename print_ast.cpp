@@ -27,5 +27,23 @@ void printAST(const AST *n, int depth) {
   } else if (auto *ret = dynamic_cast<const Return *>(n)) {
     std::cerr << pad << "Return\n";
     printAST(ret->value, depth + 1);
+  } else if (auto *c = dynamic_cast<const Conditional *>(n)) {
+    std::cerr << pad << "Cond(" << c->op << ")\n";
+    printAST(c->lhs, depth + 1);
+    printAST(c->rhs, depth + 1);
+  } else if (auto *iff = dynamic_cast<const IfStmt *>(n)) {
+    std::cerr << pad << "If\n";
+    printAST(iff->cond, depth + 1);
+    std::cerr << pad << "  Then\n";
+    for (AST *s : iff->thenBody) printAST(s, depth + 2);
+    if (!iff->elseBody.empty()) {
+      std::cerr << pad << "  Else\n";
+      for (AST *s : iff->elseBody) printAST(s, depth + 2);
+    }
+  } else if (auto *w = dynamic_cast<const WhileStmt *>(n)) {
+    std::cerr << pad << "While\n";
+    printAST(w->cond, depth + 1);
+    std::cerr << pad << "  Body\n";
+    for (AST *s : w->body) printAST(s, depth + 2);
   }
 }

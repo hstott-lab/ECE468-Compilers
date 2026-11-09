@@ -8,6 +8,14 @@
 #include "uCBaseVisitor.h"
 #include "ast.h"
 
+// the way that the though process works
+// 1. look at the grammar uC.g4 and determine what you are trying to implement
+// 2. look at what the grammar contians ie look at cond and how tha thas expr cmpop and expr
+//3. these 3 things are what a conditional statement should have when implementing it
+// 4. after this you look at the uCparser.h and you look at what the function calls are in that and make
+// 4. cont the same function calls that it has so it can refernce the same variables.
+// 5. make sure that all things variables and functions are covered in this specific scenario.
+
 class ASTBuilder : public uCBaseVisitor {
 
 public:
@@ -96,6 +104,42 @@ public:
         n->lhs = zero;
         n->rhs = std::any_cast<AST*>(visit(ctx->expr()));
         return (AST*)n;
+    }
+
+    std::any visitCond(uCParser::CondContext *ctx) override {
+        auto *c = new cond;
+        c->op  = ctx->cmpop()->getText();                     
+        c->lhs = std::any_cast<AST*>(visit(ctx->expr(0)));    
+        c->rhs = std::any_cast<AST*>(visit(ctx->expr(1)));
+        return (AST*)c;                                       
+    }
+    std::vector<AST*> collectBody(uCParser::StatementsContext *body) {
+        std::vector<AST*> saved; // creates an empty vector to hold all information from everything one nested level above said if and whiule statement
+        saved.swap(statements); // puts everythign in nested level above into the saved statements
+        visit(body); // walks through all of the statements
+        std::vector<AST*> results; // makes empty results vector
+        results.swap(statements); 
+        statements.swap(saved);
+        return results; 
+    }
+
+    std::any visitif_stmt(uCParser::If_stmtContext *ctx) override {
+        auto * if_stmt = new ifStmt;
+        if_stmt->Cond = (Conditional*) std::any_cast<AST*>(visit(ctx->cond()));
+        if_stmt->thenstmt = collectBody(ctx->statements(0));
+        if(ctx->statements().size() > 1) {// this means there is an else statement
+            if_stmt->elsestmt = collectBody(ctx->statements(1));
+            statements.push_back(if_stmt);
+        }
+        return nullptr;
+    }
+
+    std::any visitif_stmt(uCParser::If_stmtContext *ctx) override {
+        auto * while_stmt = new Whilestmt;
+        while_stmt->Cond = (Conditional*) std::any_cast<AST*>(visit(ctx->cond()));
+        while_stmt->whilebody = collectBody(ctx->statements())
+        statements.push_back(while_stmt);
+        return nullptr;
     }
 };
 #endif // AST_BUILDER_H
